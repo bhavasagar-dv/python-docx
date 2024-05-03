@@ -8,3 +8,8 @@
 _scratch/
 Session.vim
 /.tox/
+/build/
+/tests/
+/features/
+/docs/
+/ref/

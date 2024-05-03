@@ -93,12 +93,13 @@ from .document import CT_Body, CT_Document  # noqa
 register_element_cls("w:body", CT_Body)
 register_element_cls("w:document", CT_Document)
 
-from .numbering import CT_Num, CT_Numbering, CT_NumLvl, CT_NumPr  # noqa
+from .numbering import CT_Num, CT_Numbering, CT_NumLvl, CT_NumPr, CT_AbstractNum  # noqa
 
 register_element_cls("w:abstractNumId", CT_DecimalNumber)
 register_element_cls("w:ilvl", CT_DecimalNumber)
 register_element_cls("w:lvlOverride", CT_NumLvl)
 register_element_cls("w:num", CT_Num)
+register_element_cls('w:abstractNum',   CT_AbstractNum)
 register_element_cls("w:numId", CT_DecimalNumber)
 register_element_cls("w:numPr", CT_NumPr)
 register_element_cls("w:numbering", CT_Numbering)

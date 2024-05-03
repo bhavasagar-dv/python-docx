@@ -29,6 +29,16 @@ def styleId_from_name(name):
         "heading 9": "Heading9",
     }.get(name, name.replace(" ", ""))
 
+class CT_DocDefaults(BaseOxmlElement):
+    _tag_seq = ('w:rPrDefault', 'w:pPrDefault')
+    rPrDefault = ZeroOrOne('w:rPrDefault', successors=(_tag_seq[1:]))
+    pPrDefault = ZeroOrOne('w:pPrDefault', successors=())
+
+class CT_RPrDefault(BaseOxmlElement):
+    rPr = ZeroOrOne('w:rPr', successors=())
+
+class CT_PPrDefault(BaseOxmlElement):
+    pPr = ZeroOrOne('w:pPr', successors=())
 
 class CT_LatentStyles(BaseOxmlElement):
     """`w:latentStyles` element, defining behavior defaults for latent styles and
