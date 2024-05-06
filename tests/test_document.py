@@ -9,20 +9,20 @@ from typing import cast
 
 import pytest
 
-from docx.document import Document, _Body
-from docx.enum.section import WD_SECTION
-from docx.enum.text import WD_BREAK
-from docx.opc.coreprops import CoreProperties
-from docx.oxml.document import CT_Document
-from docx.parts.document import DocumentPart
-from docx.section import Section, Sections
-from docx.settings import Settings
-from docx.shape import InlineShape, InlineShapes
-from docx.shared import Length
-from docx.styles.styles import Styles
-from docx.table import Table
-from docx.text.paragraph import Paragraph
-from docx.text.run import Run
+from python_docx.document import Document, _Body
+from python_docx.enum.section import WD_SECTION
+from python_docx.enum.text import WD_BREAK
+from python_docx.opc.coreprops import CoreProperties
+from python_docx.oxml.document import CT_Document
+from python_docx.parts.document import DocumentPart
+from python_docx.section import Section, Sections
+from python_docx.settings import Settings
+from python_docx.shape import InlineShape, InlineShapes
+from python_docx.shared import Length
+from python_docx.styles.styles import Styles
+from python_docx.table import Table
+from python_docx.text.paragraph import Paragraph
+from python_docx.text.run import Run
 
 from .unitutil.cxml import element, xml
 from .unitutil.mock import Mock, class_mock, instance_mock, method_mock, property_mock

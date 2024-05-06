@@ -2,9 +2,9 @@
 
 import pytest
 
-from docx.enum.text import WD_TAB_ALIGNMENT, WD_TAB_LEADER
-from docx.shared import Twips
-from docx.text.tabstops import TabStop, TabStops
+from python_docx.enum.text import WD_TAB_ALIGNMENT, WD_TAB_LEADER
+from python_docx.shared import Twips
+from python_docx.text.tabstops import TabStop, TabStops
 
 from ..unitutil.cxml import element, xml
 from ..unitutil.mock import call, class_mock, instance_mock

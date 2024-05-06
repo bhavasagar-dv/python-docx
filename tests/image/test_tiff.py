@@ -4,9 +4,9 @@ import io
 
 import pytest
 
-from docx.image.constants import MIME_TYPE, TIFF_TAG
-from docx.image.helpers import BIG_ENDIAN, LITTLE_ENDIAN, StreamReader
-from docx.image.tiff import (
+from python_docx.image.constants import MIME_TYPE, TIFF_TAG
+from python_docx.image.helpers import BIG_ENDIAN, LITTLE_ENDIAN, StreamReader
+from python_docx.image.tiff import (
     Tiff,
     _AsciiIfdEntry,
     _IfdEntries,

@@ -6,10 +6,10 @@ import datetime as dt
 
 import pytest
 
-from docx.opc.coreprops import CoreProperties
-from docx.opc.package import OpcPackage
-from docx.opc.packuri import PackURI
-from docx.opc.parts.coreprops import CorePropertiesPart
+from python_docx.opc.coreprops import CoreProperties
+from python_docx.opc.package import OpcPackage
+from python_docx.opc.packuri import PackURI
+from python_docx.opc.parts.coreprops import CorePropertiesPart
 
 from ...unitutil.cxml import element
 from ...unitutil.mock import FixtureRequest, Mock, class_mock, instance_mock

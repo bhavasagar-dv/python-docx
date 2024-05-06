@@ -6,14 +6,14 @@ from __future__ import annotations
 
 import pytest
 
-from docx.opc.constants import RELATIONSHIP_TYPE as RT
-from docx.opc.coreprops import CoreProperties
-from docx.opc.package import OpcPackage, Unmarshaller
-from docx.opc.packuri import PACKAGE_URI, PackURI
-from docx.opc.part import Part
-from docx.opc.parts.coreprops import CorePropertiesPart
-from docx.opc.pkgreader import PackageReader
-from docx.opc.rel import Relationships, _Relationship
+from python_docx.opc.constants import RELATIONSHIP_TYPE as RT
+from python_docx.opc.coreprops import CoreProperties
+from python_docx.opc.package import OpcPackage, Unmarshaller
+from python_docx.opc.packuri import PACKAGE_URI, PackURI
+from python_docx.opc.part import Part
+from python_docx.opc.parts.coreprops import CorePropertiesPart
+from python_docx.opc.pkgreader import PackageReader
+from python_docx.opc.rel import Relationships, _Relationship
 
 from ..unitutil.mock import (
     FixtureRequest,

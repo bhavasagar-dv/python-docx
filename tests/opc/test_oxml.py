@@ -1,14 +1,14 @@
 """Test suite for opc.oxml module."""
 
-from docx.opc.constants import RELATIONSHIP_TARGET_MODE as RTM
-from docx.opc.oxml import (
+from python_docx.opc.constants import RELATIONSHIP_TARGET_MODE as RTM
+from python_docx.opc.oxml import (
     CT_Default,
     CT_Override,
     CT_Relationship,
     CT_Relationships,
     CT_Types,
 )
-from docx.oxml.xmlchemy import serialize_for_reading
+from python_docx.oxml.xmlchemy import serialize_for_reading
 
 from .unitdata.rels import (
     a_Default,

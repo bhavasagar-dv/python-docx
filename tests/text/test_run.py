@@ -8,14 +8,14 @@ from typing import Any, List, cast
 
 import pytest
 
-from docx import types as t
-from docx.enum.style import WD_STYLE_TYPE
-from docx.enum.text import WD_BREAK, WD_UNDERLINE
-from docx.oxml.text.run import CT_R
-from docx.parts.document import DocumentPart
-from docx.shape import InlineShape
-from docx.text.font import Font
-from docx.text.run import Run
+from python_docx import types as t
+from python_docx.enum.style import WD_STYLE_TYPE
+from python_docx.enum.text import WD_BREAK, WD_UNDERLINE
+from python_docx.oxml.text.run import CT_R
+from python_docx.parts.document import DocumentPart
+from python_docx.shape import InlineShape
+from python_docx.text.font import Font
+from python_docx.text.run import Run
 
 from ..unitutil.cxml import element, xml
 from ..unitutil.mock import class_mock, instance_mock, property_mock

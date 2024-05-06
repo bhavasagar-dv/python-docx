@@ -2,10 +2,10 @@
 
 import pytest
 
-from docx.image.image import Image
-from docx.opc.packuri import PackURI
-from docx.package import ImageParts, Package
-from docx.parts.image import ImagePart
+from python_docx.image.image import Image
+from python_docx.opc.packuri import PackURI
+from python_docx.package import ImageParts, Package
+from python_docx.parts.image import ImagePart
 
 from .unitutil.file import docx_path
 from .unitutil.mock import class_mock, instance_mock, method_mock, property_mock

@@ -8,16 +8,16 @@ from typing import cast
 
 import pytest
 
-from docx import Document
-from docx.enum.section import WD_HEADER_FOOTER, WD_ORIENTATION, WD_SECTION
-from docx.oxml.document import CT_Document
-from docx.oxml.section import CT_SectPr
-from docx.parts.document import DocumentPart
-from docx.parts.hdrftr import FooterPart, HeaderPart
-from docx.section import Section, Sections, _BaseHeaderFooter, _Footer, _Header
-from docx.shared import Inches, Length
-from docx.table import Table
-from docx.text.paragraph import Paragraph
+from python_docx import Document
+from python_docx.enum.section import WD_HEADER_FOOTER, WD_ORIENTATION, WD_SECTION
+from python_docx.oxml.document import CT_Document
+from python_docx.oxml.section import CT_SectPr
+from python_docx.parts.document import DocumentPart
+from python_docx.parts.hdrftr import FooterPart, HeaderPart
+from python_docx.section import Section, Sections, _BaseHeaderFooter, _Footer, _Header
+from python_docx.shared import Inches, Length
+from python_docx.table import Table
+from python_docx.text.paragraph import Paragraph
 
 from .unitutil.cxml import element, xml
 from .unitutil.file import test_file

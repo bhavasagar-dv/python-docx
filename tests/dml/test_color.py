@@ -2,9 +2,9 @@
 
 import pytest
 
-from docx.dml.color import ColorFormat
-from docx.enum.dml import MSO_COLOR_TYPE, MSO_THEME_COLOR
-from docx.shared import RGBColor
+from python_docx.dml.color import ColorFormat
+from python_docx.enum.dml import MSO_COLOR_TYPE, MSO_THEME_COLOR
+from python_docx.shared import RGBColor
 
 from ..unitutil.cxml import element, xml
 

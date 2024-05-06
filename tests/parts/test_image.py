@@ -2,13 +2,13 @@
 
 import pytest
 
-from docx.image.image import Image
-from docx.opc.constants import CONTENT_TYPE as CT
-from docx.opc.constants import RELATIONSHIP_TYPE as RT
-from docx.opc.packuri import PackURI
-from docx.opc.part import PartFactory
-from docx.package import Package
-from docx.parts.image import ImagePart
+from python_docx.image.image import Image
+from python_docx.opc.constants import CONTENT_TYPE as CT
+from python_docx.opc.constants import RELATIONSHIP_TYPE as RT
+from python_docx.opc.packuri import PackURI
+from python_docx.opc.part import PartFactory
+from python_docx.package import Package
+from python_docx.parts.image import ImagePart
 
 from ..unitutil.file import test_file
 from ..unitutil.mock import ANY, initializer_mock, instance_mock, method_mock

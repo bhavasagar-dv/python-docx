@@ -2,14 +2,14 @@
 
 import pytest
 
-from docx.enum.style import WD_STYLE_TYPE
-from docx.image.image import Image
-from docx.opc.constants import RELATIONSHIP_TYPE as RT
-from docx.package import Package
-from docx.parts.document import DocumentPart
-from docx.parts.image import ImagePart
-from docx.parts.story import StoryPart
-from docx.styles.style import BaseStyle
+from python_docx.enum.style import WD_STYLE_TYPE
+from python_docx.image.image import Image
+from python_docx.opc.constants import RELATIONSHIP_TYPE as RT
+from python_docx.package import Package
+from python_docx.parts.document import DocumentPart
+from python_docx.parts.image import ImagePart
+from python_docx.parts.story import StoryPart
+from python_docx.styles.style import BaseStyle
 
 from ..unitutil.cxml import element
 from ..unitutil.file import snippet_text

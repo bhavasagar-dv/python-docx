@@ -2,14 +2,14 @@
 
 from behave import given, then, when
 
-from docx import Document
-from docx.enum.section import WD_ORIENT, WD_SECTION
-from docx.section import Sections
-from docx.shape import InlineShapes
-from docx.shared import Inches
-from docx.styles.styles import Styles
-from docx.table import Table
-from docx.text.paragraph import Paragraph
+from python_docx import Document
+from python_docx.enum.section import WD_ORIENT, WD_SECTION
+from python_docx.section import Sections
+from python_docx.shape import InlineShapes
+from python_docx.shared import Inches
+from python_docx.styles.styles import Styles
+from python_docx.table import Table
+from python_docx.text.paragraph import Paragraph
 
 from helpers import test_docx, test_file
 

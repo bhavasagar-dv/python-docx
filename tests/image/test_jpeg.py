@@ -4,9 +4,9 @@ import io
 
 import pytest
 
-from docx.image.constants import JPEG_MARKER_CODE, MIME_TYPE
-from docx.image.helpers import BIG_ENDIAN, StreamReader
-from docx.image.jpeg import (
+from python_docx.image.constants import JPEG_MARKER_CODE, MIME_TYPE
+from python_docx.image.helpers import BIG_ENDIAN, StreamReader
+from python_docx.image.jpeg import (
     Exif,
     Jfif,
     Jpeg,
@@ -19,7 +19,7 @@ from docx.image.jpeg import (
     _MarkerParser,
     _SofMarker,
 )
-from docx.image.tiff import Tiff
+from python_docx.image.tiff import Tiff
 
 from ..unitutil.mock import (
     ANY,

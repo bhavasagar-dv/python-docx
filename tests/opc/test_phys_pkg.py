@@ -6,9 +6,9 @@ from zipfile import ZIP_DEFLATED, ZipFile
 
 import pytest
 
-from docx.opc.exceptions import PackageNotFoundError
-from docx.opc.packuri import PACKAGE_URI, PackURI
-from docx.opc.phys_pkg import (
+from python_docx.opc.exceptions import PackageNotFoundError
+from python_docx.opc.packuri import PACKAGE_URI, PackURI
+from python_docx.opc.phys_pkg import (
     PhysPkgReader,
     PhysPkgWriter,
     _DirPkgReader,

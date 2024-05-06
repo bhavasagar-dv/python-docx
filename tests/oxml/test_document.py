@@ -4,9 +4,9 @@ from __future__ import annotations
 
 from typing import cast
 
-from docx.oxml.document import CT_Body
-from docx.oxml.table import CT_Tbl
-from docx.oxml.text.paragraph import CT_P
+from python_docx.oxml.document import CT_Body
+from python_docx.oxml.table import CT_Tbl
+from python_docx.oxml.text.paragraph import CT_P
 
 from ..unitutil.cxml import element
 

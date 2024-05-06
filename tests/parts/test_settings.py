@@ -2,12 +2,12 @@
 
 import pytest
 
-from docx.opc.constants import CONTENT_TYPE as CT
-from docx.opc.package import OpcPackage
-from docx.opc.part import PartFactory
-from docx.package import Package
-from docx.parts.settings import SettingsPart
-from docx.settings import Settings
+from python_docx.opc.constants import CONTENT_TYPE as CT
+from python_docx.opc.package import OpcPackage
+from python_docx.opc.part import PartFactory
+from python_docx.package import Package
+from python_docx.parts.settings import SettingsPart
+from python_docx.settings import Settings
 
 from ..unitutil.cxml import element
 from ..unitutil.mock import class_mock, instance_mock, method_mock

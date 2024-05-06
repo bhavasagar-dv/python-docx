@@ -2,10 +2,10 @@
 
 import pytest
 
-from docx.enum.shape import WD_INLINE_SHAPE
-from docx.oxml.ns import nsmap
-from docx.shape import InlineShape, InlineShapes
-from docx.shared import Length
+from python_docx.enum.shape import WD_INLINE_SHAPE
+from python_docx.oxml.ns import nsmap
+from python_docx.shape import InlineShape, InlineShapes
+from python_docx.shared import Length
 
 from .oxml.unitdata.dml import (
     a_blip,

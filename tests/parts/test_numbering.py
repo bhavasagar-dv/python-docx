@@ -2,8 +2,8 @@
 
 import pytest
 
-from docx.oxml.numbering import CT_Numbering
-from docx.parts.numbering import NumberingPart, _NumberingDefinitions
+from python_docx.oxml.numbering import CT_Numbering
+from python_docx.parts.numbering import NumberingPart, _NumberingDefinitions
 
 from ..oxml.unitdata.numbering import a_num, a_numbering
 from ..unitutil.mock import class_mock, instance_mock

@@ -4,11 +4,11 @@ from typing import cast
 
 import pytest
 
-from docx import types as t
-from docx.opc.rel import _Relationship  # pyright: ignore[reportPrivateUsage]
-from docx.oxml.text.hyperlink import CT_Hyperlink
-from docx.parts.story import StoryPart
-from docx.text.hyperlink import Hyperlink
+from python_docx import types as t
+from python_docx.opc.rel import _Relationship  # pyright: ignore[reportPrivateUsage]
+from python_docx.oxml.text.hyperlink import CT_Hyperlink
+from python_docx.parts.story import StoryPart
+from python_docx.text.hyperlink import Hyperlink
 
 from ..unitutil.cxml import element
 from ..unitutil.mock import FixtureRequest, Mock, instance_mock

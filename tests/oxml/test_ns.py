@@ -2,7 +2,7 @@
 
 import pytest
 
-from docx.oxml.ns import NamespacePrefixedTag
+from python_docx.oxml.ns import NamespacePrefixedTag
 
 
 class DescribeNamespacePrefixedTag:

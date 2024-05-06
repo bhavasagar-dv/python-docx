@@ -18,8 +18,8 @@ Here's an example of what |docx| can do:
 ============================================  ===============================================================
 |img|                                         ::
 
-                                                from docx import Document
-                                                from docx.shared import Inches
+                                                from python_docx import Document
+                                                from python_docx.shared import Inches
 
                                                 document = Document()
 

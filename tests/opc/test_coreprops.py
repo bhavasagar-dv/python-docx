@@ -9,11 +9,11 @@ from typing import TYPE_CHECKING, cast
 
 import pytest
 
-from docx.opc.coreprops import CoreProperties
-from docx.oxml.parser import parse_xml
+from python_docx.opc.coreprops import CoreProperties
+from python_docx.oxml.parser import parse_xml
 
 if TYPE_CHECKING:
-    from docx.oxml.coreprops import CT_CoreProperties
+    from python_docx.oxml.coreprops import CT_CoreProperties
 
 
 class DescribeCoreProperties:

@@ -6,9 +6,9 @@ from typing import cast
 
 import pytest
 
-from docx import types as t
-from docx.oxml.text.paragraph import CT_P
-from docx.text.pagebreak import RenderedPageBreak
+from python_docx import types as t
+from python_docx.oxml.text.paragraph import CT_P
+from python_docx.text.pagebreak import RenderedPageBreak
 
 from ..unitutil.cxml import element, xml
 

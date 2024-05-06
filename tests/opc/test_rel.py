@@ -4,10 +4,10 @@
 
 import pytest
 
-from docx.opc.oxml import CT_Relationships
-from docx.opc.packuri import PackURI
-from docx.opc.part import Part
-from docx.opc.rel import Relationships, _Relationship
+from python_docx.opc.oxml import CT_Relationships
+from python_docx.opc.packuri import PackURI
+from python_docx.opc.part import Part
+from python_docx.opc.rel import Relationships, _Relationship
 
 from ..unitutil.mock import Mock, PropertyMock, call, class_mock, instance_mock, patch
 

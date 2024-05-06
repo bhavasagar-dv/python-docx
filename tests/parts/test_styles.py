@@ -2,11 +2,11 @@
 
 import pytest
 
-from docx.opc.constants import CONTENT_TYPE as CT
-from docx.opc.package import OpcPackage
-from docx.oxml.styles import CT_Styles
-from docx.parts.styles import StylesPart
-from docx.styles.styles import Styles
+from python_docx.opc.constants import CONTENT_TYPE as CT
+from python_docx.opc.package import OpcPackage
+from python_docx.oxml.styles import CT_Styles
+from python_docx.parts.styles import StylesPart
+from python_docx.styles.styles import Styles
 
 from ..unitutil.mock import class_mock, instance_mock
 

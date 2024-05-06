@@ -10,7 +10,7 @@ Row.height
 
 Candidate protocol::
 
-    >>> from docx.enum.table import WD_ROW_HEIGHT
+    >>> from python_docx.enum.table import WD_ROW_HEIGHT
     >>> row = table.add_row()
     >>> row
     <docx.table._Row object at 0x...>

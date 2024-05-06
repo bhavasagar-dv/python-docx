@@ -3,7 +3,7 @@
 from behave import given, then, when
 
 import docx
-from docx import Document
+from python_docx import Document
 
 from helpers import test_docx
 

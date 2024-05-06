@@ -3,8 +3,8 @@
 import pytest
 
 import docx
-from docx.api import Document
-from docx.opc.constants import CONTENT_TYPE as CT
+from python_docx.api import Document
+from python_docx.opc.constants import CONTENT_TYPE as CT
 
 from .unitutil.mock import class_mock, function_mock, instance_mock
 

@@ -4,15 +4,15 @@ from typing import List, cast
 
 import pytest
 
-from docx import types as t
-from docx.enum.style import WD_STYLE_TYPE
-from docx.enum.text import WD_ALIGN_PARAGRAPH
-from docx.oxml.text.paragraph import CT_P
-from docx.oxml.text.run import CT_R
-from docx.parts.document import DocumentPart
-from docx.text.paragraph import Paragraph
-from docx.text.parfmt import ParagraphFormat
-from docx.text.run import Run
+from python_docx import types as t
+from python_docx.enum.style import WD_STYLE_TYPE
+from python_docx.enum.text import WD_ALIGN_PARAGRAPH
+from python_docx.oxml.text.paragraph import CT_P
+from python_docx.oxml.text.run import CT_R
+from python_docx.parts.document import DocumentPart
+from python_docx.text.paragraph import Paragraph
+from python_docx.text.parfmt import ParagraphFormat
+from python_docx.text.run import Run
 
 from ..unitutil.cxml import element, xml
 from ..unitutil.mock import call, class_mock, instance_mock, method_mock, property_mock

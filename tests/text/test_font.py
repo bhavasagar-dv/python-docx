@@ -9,11 +9,11 @@ from typing import cast
 import pytest
 from _pytest.fixtures import FixtureRequest
 
-from docx.dml.color import ColorFormat
-from docx.enum.text import WD_COLOR, WD_UNDERLINE
-from docx.oxml.text.run import CT_R
-from docx.shared import Length, Pt
-from docx.text.font import Font
+from python_docx.dml.color import ColorFormat
+from python_docx.enum.text import WD_COLOR, WD_UNDERLINE
+from python_docx.oxml.text.run import CT_R
+from python_docx.shared import Length, Pt
+from python_docx.text.font import Font
 
 from ..unitutil.cxml import element, xml
 from ..unitutil.mock import Mock, class_mock, instance_mock

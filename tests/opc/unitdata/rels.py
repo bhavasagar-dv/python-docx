@@ -1,9 +1,9 @@
 """Test data for relationship-related unit tests."""
 
-from docx.opc.constants import NAMESPACE as NS
-from docx.opc.constants import RELATIONSHIP_TYPE as RT
-from docx.opc.oxml import parse_xml
-from docx.opc.rel import Relationships
+from python_docx.opc.constants import NAMESPACE as NS
+from python_docx.opc.constants import RELATIONSHIP_TYPE as RT
+from python_docx.opc.oxml import parse_xml
+from python_docx.opc.rel import Relationships
 
 
 class BaseBuilder:

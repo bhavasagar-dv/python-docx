@@ -4,15 +4,15 @@ import io
 
 import pytest
 
-from docx.image.bmp import Bmp
-from docx.image.exceptions import UnrecognizedImageError
-from docx.image.gif import Gif
-from docx.image.image import BaseImageHeader, Image, _ImageHeaderFactory
-from docx.image.jpeg import Exif, Jfif
-from docx.image.png import Png
-from docx.image.tiff import Tiff
-from docx.opc.constants import CONTENT_TYPE as CT
-from docx.shared import Emu, Length
+from python_docx.image.bmp import Bmp
+from python_docx.image.exceptions import UnrecognizedImageError
+from python_docx.image.gif import Gif
+from python_docx.image.image import BaseImageHeader, Image, _ImageHeaderFactory
+from python_docx.image.jpeg import Exif, Jfif
+from python_docx.image.png import Png
+from python_docx.image.tiff import Tiff
+from python_docx.opc.constants import CONTENT_TYPE as CT
+from python_docx.shared import Emu, Length
 
 from ..unitutil.file import test_file
 from ..unitutil.mock import (

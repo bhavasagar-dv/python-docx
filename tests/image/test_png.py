@@ -4,10 +4,10 @@ import io
 
 import pytest
 
-from docx.image.constants import MIME_TYPE, PNG_CHUNK_TYPE
-from docx.image.exceptions import InvalidImageStreamError
-from docx.image.helpers import BIG_ENDIAN, StreamReader
-from docx.image.png import (
+from python_docx.image.constants import MIME_TYPE, PNG_CHUNK_TYPE
+from python_docx.image.exceptions import InvalidImageStreamError
+from python_docx.image.helpers import BIG_ENDIAN, StreamReader
+from python_docx.image.png import (
     Png,
     _Chunk,
     _ChunkFactory,

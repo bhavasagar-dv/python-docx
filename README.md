@@ -11,7 +11,7 @@ pip install python-docx
 ## Example
 
 ```python
->>> from docx import Document
+>>> from python_docx import Document
 
 >>> document = Document()
 >>> document.add_paragraph("It was a dark and stormy night.")

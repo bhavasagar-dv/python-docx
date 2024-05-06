@@ -4,8 +4,8 @@ import io
 
 import pytest
 
-from docx.image.exceptions import UnexpectedEndOfFileError
-from docx.image.helpers import BIG_ENDIAN, LITTLE_ENDIAN, StreamReader
+from python_docx.image.exceptions import UnexpectedEndOfFileError
+from python_docx.image.helpers import BIG_ENDIAN, LITTLE_ENDIAN, StreamReader
 
 
 class DescribeStreamReader:

@@ -2,8 +2,8 @@
 
 import pytest
 
-from docx.enum.style import WD_STYLE_TYPE
-from docx.styles.style import (
+from python_docx.enum.style import WD_STYLE_TYPE
+from python_docx.styles.style import (
     BaseStyle,
     CharacterStyle,
     ParagraphStyle,
@@ -11,8 +11,8 @@ from docx.styles.style import (
     _NumberingStyle,
     _TableStyle,
 )
-from docx.text.font import Font
-from docx.text.parfmt import ParagraphFormat
+from python_docx.text.font import Font
+from python_docx.text.parfmt import ParagraphFormat
 
 from ..unitutil.cxml import element, xml
 from ..unitutil.mock import call, class_mock, function_mock, instance_mock

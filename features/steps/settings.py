@@ -2,8 +2,8 @@
 
 from behave import given, then, when
 
-from docx import Document
-from docx.settings import Settings
+from python_docx import Document
+from python_docx.settings import Settings
 
 from helpers import test_docx
 

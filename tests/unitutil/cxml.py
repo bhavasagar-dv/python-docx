@@ -20,8 +20,8 @@ from pyparsing import (
     stringEnd,
 )
 
-from docx.oxml.ns import nsmap
-from docx.oxml.parser import parse_xml
+from python_docx.oxml.ns import nsmap
+from python_docx.oxml.parser import parse_xml
 
 # ====================================================================
 # api functions

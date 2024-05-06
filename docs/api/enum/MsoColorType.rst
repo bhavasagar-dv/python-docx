@@ -7,7 +7,7 @@ Specifies the color specification scheme
 
 Example::
 
-    from docx.enum.dml import MSO_COLOR_TYPE
+    from python_docx.enum.dml import MSO_COLOR_TYPE
 
     assert font.color.type == MSO_COLOR_TYPE.THEME
 

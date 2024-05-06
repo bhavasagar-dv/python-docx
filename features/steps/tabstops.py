@@ -2,10 +2,10 @@
 
 from behave import given, then, when
 
-from docx import Document
-from docx.enum.text import WD_TAB_ALIGNMENT, WD_TAB_LEADER
-from docx.shared import Inches
-from docx.text.tabstops import TabStop
+from python_docx import Document
+from python_docx.enum.text import WD_TAB_ALIGNMENT, WD_TAB_LEADER
+from python_docx.shared import Inches
+from python_docx.text.tabstops import TabStop
 
 from helpers import test_docx
 

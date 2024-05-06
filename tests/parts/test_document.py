@@ -2,18 +2,18 @@
 
 import pytest
 
-from docx.enum.style import WD_STYLE_TYPE
-from docx.opc.constants import RELATIONSHIP_TYPE as RT
-from docx.opc.coreprops import CoreProperties
-from docx.package import Package
-from docx.parts.document import DocumentPart
-from docx.parts.hdrftr import FooterPart, HeaderPart
-from docx.parts.numbering import NumberingPart
-from docx.parts.settings import SettingsPart
-from docx.parts.styles import StylesPart
-from docx.settings import Settings
-from docx.styles.style import BaseStyle
-from docx.styles.styles import Styles
+from python_docx.enum.style import WD_STYLE_TYPE
+from python_docx.opc.constants import RELATIONSHIP_TYPE as RT
+from python_docx.opc.coreprops import CoreProperties
+from python_docx.package import Package
+from python_docx.parts.document import DocumentPart
+from python_docx.parts.hdrftr import FooterPart, HeaderPart
+from python_docx.parts.numbering import NumberingPart
+from python_docx.parts.settings import SettingsPart
+from python_docx.parts.styles import StylesPart
+from python_docx.settings import Settings
+from python_docx.styles.style import BaseStyle
+from python_docx.styles.styles import Styles
 
 from ..oxml.parts.unitdata.document import a_body, a_document
 from ..unitutil.mock import class_mock, instance_mock, method_mock, property_mock

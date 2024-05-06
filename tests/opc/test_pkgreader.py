@@ -2,11 +2,11 @@
 
 import pytest
 
-from docx.opc.constants import CONTENT_TYPE as CT
-from docx.opc.constants import RELATIONSHIP_TARGET_MODE as RTM
-from docx.opc.packuri import PackURI
-from docx.opc.phys_pkg import _ZipPkgReader
-from docx.opc.pkgreader import (
+from python_docx.opc.constants import CONTENT_TYPE as CT
+from python_docx.opc.constants import RELATIONSHIP_TARGET_MODE as RTM
+from python_docx.opc.packuri import PackURI
+from python_docx.opc.phys_pkg import _ZipPkgReader
+from python_docx.opc.pkgreader import (
     PackageReader,
     _ContentTypeMap,
     _SerializedPart,
