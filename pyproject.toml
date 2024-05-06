@@ -43,7 +43,7 @@ line-length = 100
 target-version = ["py37", "py38", "py39", "py310", "py311"]
 
 [tool.pyright]
-include = ["src/docx", "tests"]
+include = ["src/python_docx", "tests"]
 pythonPlatform = "All"
 pythonVersion = "3.8"
 reportImportCycles = true
@@ -68,6 +68,7 @@ looponfailroots = ["src", "tests"]
 norecursedirs = [
     "doc",
     "docx",
+    "python_docx",
     "*.egg-info",
     "features",
     ".git",
@@ -106,8 +107,8 @@ select = [
 ]
 
 [tool.ruff.lint.isort]
-known-first-party = ["docx"]
+known-first-party = ["python_docx"]
 known-local-folder = ["helpers"]
 
 [tool.setuptools.dynamic]
-version = {attr = "docx.__version__"}
+version = {attr = "python_docx.__version__"}
