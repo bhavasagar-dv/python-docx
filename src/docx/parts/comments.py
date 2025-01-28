@@ -12,8 +12,6 @@ if TYPE_CHECKING:
     from docx.oxml.comments import (
         CT_Comments,
         CT_CommentsExtended,
-        CT_CommentsExtensible,
-        CT_CommentsIds,
     )
     from docx.package import Package
 

@@ -109,21 +109,12 @@ class CT_CommentReference(BaseOxmlElement):
         return comment_reference
 
 
-# TODO: add required methods later
-class CT_CommentsIds(BaseOxmlElement):
-    """``<w16cid:commentsIds>`` element, the root element of the commentsIds part."""
-
-
 class CT_CommentExtended(BaseOxmlElement):
     """``<w15:commentEx>`` element, the root element of the commentsExtended part."""
 
     para_id = RequiredAttribute("w15:paraId", ST_String)
     resolved = RequiredAttribute("w15:done", XsdBoolean)
     parent_para_id = OptionalAttribute("w15:paraIdParent", ST_String)
-
-    @staticmethod
-    def get_element(para_id: str) -> "CT_CommentExtended":
-        """Return the comment extended element for the given paragraph id"""
 
 
 class CT_CommentsExtended(BaseOxmlElement):
@@ -146,6 +137,9 @@ class CT_CommentsExtended(BaseOxmlElement):
         comment_ext.resolved = resolved
         return comment_ext
 
-
-class CT_CommentsExtensible(BaseOxmlElement):
-    """``<w16cex:commentsExtensible>`` element, the root element of the commentsExtensible part."""
+    def get_element(self, para_id: str) -> Optional[CT_CommentExtended]:
+        """Return the comment extended element for the given paragraph id"""
+        try:
+            return self.xpath(f"./w15:commentEx[@w15:paraId='{para_id}']")[0]
+        except:
+            raise KeyError(f"no <w15:commentEx> element with paraId {para_id}")
