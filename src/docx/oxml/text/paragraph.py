@@ -139,6 +139,8 @@ class CT_P(BaseOxmlElement):
         self.insert(0, CT_CommentRangeStart.new(comment.id))
         self.append(CT_CommentRangeEnd.new(comment.id))
         self.add_r().append(CT_CommentReference.new(comment.id))
+        
+        resolved = metadata.get("resolved", False)
 
-        comments_extended_ele.add_comment_reference(comment, parent)
+        comments_extended_ele.add_comment_reference(comment, parent, resolved)
         return comment
