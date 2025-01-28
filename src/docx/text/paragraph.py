@@ -2,11 +2,11 @@
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Iterator, List, cast
+from typing import TYPE_CHECKING, Iterator, List, Optional, cast
 
 from docx.enum.style import WD_STYLE_TYPE
-from docx.oxml.text.footnote_reference import CT_FtnEdnRef
 from docx.oxml.text.run import CT_R
+from docx.parts.comments import CommentsExtendedPart, CommentsPart
 from docx.shared import StoryChild
 from docx.styles.style import ParagraphStyle
 from docx.text.hyperlink import Hyperlink
@@ -20,6 +20,7 @@ if TYPE_CHECKING:
     from docx.oxml.footnote import CT_FtnEnd
     from docx.oxml.text.paragraph import CT_P
     from docx.styles.style import CharacterStyle
+    from docx.oxml.comments import CT_Comment
 
 
 class Paragraph(StoryChild):
@@ -42,9 +43,7 @@ class Paragraph(StoryChild):
         footnote = document._add_footnote(new_fr_id)
         return footnote
 
-    def add_run(
-        self, text: str | None = None, style: str | CharacterStyle | None = None
-    ) -> Run:
+    def add_run(self, text: str | None = None, style: str | CharacterStyle | None = None) -> Run:
         """Append run containing `text` and having character-style `style`.
 
         `text` can contain tab (``\\t``) characters, which are converted to the
@@ -199,6 +198,19 @@ class Paragraph(StoryChild):
         p = self._p.add_p_before()
         return Paragraph(p, self._parent)
 
-    def _increment_containing_footnote_reference_ids(self) -> CT_FtnEdnRef | None:
-        for r in self.runs:
-            r._r.increment_containing_footnote_reference_ids()
+    def add_comment(
+        self, text: str, metadata: dict[str, str], parent: Optional[CT_Comment] = None
+    ) -> CT_Comment:
+        """Add a comment to this paragraph.
+
+        The comment is added to the end of the paragraph. The `text` argument is the
+        text of the comment, and the `metadata` argument is a dictionary of metadata
+        about the comment. The keys and values in the dictionary are arbitrary strings.
+        """
+        comments_part: CommentsPart = self.part._document_part.comments_part
+        comments_extended_part: CommentsExtendedPart = (
+            self.part._document_part.comments_extended_part
+        )
+        return self._p.add_comment(
+            comments_part, comments_extended_part, text, metadata, parent
+        )

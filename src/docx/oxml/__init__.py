@@ -260,3 +260,24 @@ from .text.footnote_reference import CT_FtnEdnRef
 register_element_cls("w:footnoteReference", CT_FtnEdnRef)
 register_element_cls("w:footnote", CT_FtnEnd)
 register_element_cls("w:footnotes", CT_Footnotes)
+
+# ---------------------------------------------------------------------------
+# comment-related mappings
+
+from .comments import (
+    CT_CommentExtended,
+    CT_Comments,
+    CT_Comment,
+    CT_CommentRangeStart,
+    CT_CommentRangeEnd,
+    CT_CommentReference,
+    CT_CommentsExtended,
+)
+
+register_element_cls("w:comments", CT_Comments)
+register_element_cls("w:comment", CT_Comment)
+register_element_cls("w:commentRangeStart", CT_CommentRangeStart)
+register_element_cls("w:commentRangeEnd", CT_CommentRangeEnd)
+register_element_cls("w:commentReference", CT_CommentReference)
+register_element_cls("w15:commentsEx", CT_CommentsExtended)
+register_element_cls("w15:commentEx", CT_CommentExtended)

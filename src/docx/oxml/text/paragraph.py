@@ -4,10 +4,19 @@
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Callable, List, cast
+from typing import TYPE_CHECKING, Callable, Dict, List, Optional, cast
 
+from docx.oxml.comments import (
+    CT_Comment,
+    CT_CommentRangeEnd,
+    CT_CommentRangeStart,
+    CT_CommentReference,
+    CT_Comments,
+    CT_CommentsExtended,
+)
+from docx.oxml.simpletypes import ST_String
 from docx.oxml.parser import OxmlElement
-from docx.oxml.xmlchemy import BaseOxmlElement, ZeroOrMore, ZeroOrOne
+from docx.oxml.xmlchemy import BaseOxmlElement, OptionalAttribute, ZeroOrMore, ZeroOrOne
 
 if TYPE_CHECKING:
     from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
@@ -16,6 +25,7 @@ if TYPE_CHECKING:
     from docx.oxml.text.pagebreak import CT_LastRenderedPageBreak
     from docx.oxml.text.parfmt import CT_PPr
     from docx.oxml.text.run import CT_R
+    from docx.parts.comments import CommentsExtendedPart, CommentsPart
 
 
 class CT_P(BaseOxmlElement):
@@ -26,6 +36,7 @@ class CT_P(BaseOxmlElement):
     hyperlink_lst: List[CT_Hyperlink]
     r_lst: List[CT_R]
 
+    para_id = OptionalAttribute("w14:paraId", ST_String)
     pPr: CT_PPr | None = ZeroOrOne("w:pPr")  # pyright: ignore[reportAssignmentType]
     hyperlink = ZeroOrMore("w:hyperlink")
     r = ZeroOrMore("w:r")
@@ -70,17 +81,6 @@ class CT_P(BaseOxmlElement):
             "./w:r/w:lastRenderedPageBreak | ./w:hyperlink/w:r/w:lastRenderedPageBreak"
         )
 
-    @property
-    def footnote_reference_ids(self) -> List[int]:
-        """Return all footnote reference ids (``<w:footnoteReference>``) form the paragraph."""
-
-        footnote_ids = []
-        for run in self.r_lst:
-            new_footnote_ids = run.footnote_reference_ids
-            if new_footnote_ids and len(new_footnote_ids) > 0:
-                footnote_ids.extend(new_footnote_ids)
-        return footnote_ids
-
     def set_sectPr(self, sectPr: CT_SectPr):
         """Unconditionally replace or add `sectPr` as grandchild in correct sequence."""
         pPr = self.get_or_add_pPr()
@@ -115,3 +115,30 @@ class CT_P(BaseOxmlElement):
     def _insert_pPr(self, pPr: CT_PPr) -> CT_PPr:
         self.insert(0, pPr)
         return pPr
+
+    def add_comment(
+        self,
+        comments_part: CommentsPart,
+        comments_extended_part: CommentsExtendedPart,
+        text: str,
+        metadata: Dict[str, str],
+        parent: Optional[CT_Comment] = None,
+    ) -> CT_Comment:
+        """
+        Add a comment to this paragraph.
+        """
+        comment_ele = cast(CT_Comments, comments_part.element)
+        comments_extended_ele = cast(CT_CommentsExtended, comments_extended_part.element)
+
+        new_p = cast(CT_P, OxmlElement("w:p"))
+        new_p.add_r().text = text
+        comment = comment_ele.add_comment(
+            new_p, metadata["author"], metadata["initials"], metadata["date"]
+        )
+        # TODO: modify this insert call to insert below the any existing comment reference.
+        self.insert(0, CT_CommentRangeStart.new(comment.id))
+        self.append(CT_CommentRangeEnd.new(comment.id))
+        self.add_r().append(CT_CommentReference.new(comment.id))
+
+        comments_extended_ele.add_comment_reference(comment, parent)
+        return comment
